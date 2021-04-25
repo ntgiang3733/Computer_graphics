@@ -272,7 +272,7 @@ public class Player : MonoBehaviour {
 
 	void ReloadScene()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		SceneManager.LoadScene("GameOver");
 	}
 
 	public void SetHealthAndBombs(int life, int bomb)

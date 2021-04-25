@@ -13,13 +13,7 @@ public class MenuMain : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if(PlayerPrefs.HasKey("Current_Scene"))
-        {
-            continueButton.SetActive(true);
-        } else
-        {
-            continueButton.SetActive(false);
-        }
+		
 	}
 	
 	// Update is called once per frame
