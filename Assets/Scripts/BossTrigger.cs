@@ -11,6 +11,8 @@ public class BossTrigger : MonoBehaviour {
 			FindObjectOfType<Boss>().ActivateBoss();
 			FindObjectOfType<UnityStandardAssets._2D.CameraFollow>().minXAndY = new Vector2(73.4f, 0);
 			gameObject.SetActive(false);
+			AudioManager.instance.StopMusic();
+			AudioManager.instance.PlayBGM(6);
 		}
 	}
 }

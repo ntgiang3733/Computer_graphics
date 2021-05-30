@@ -23,6 +23,8 @@ public class Boss : MonoBehaviour {
 	private bool isDead = false;
 	private SpriteRenderer sprite;
 
+	public GameObject explosion;
+
 	// Use this for initialization
 	void Start () {
 
@@ -32,7 +34,10 @@ public class Boss : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(isDead){
+			gameObject.SetActive(false);
+			Instantiate(explosion, transform.position, transform.rotation);
+		}
 	}
 
 	public void ActivateBoss()
@@ -87,6 +92,8 @@ public class Boss : MonoBehaviour {
 			{
 				bullet.gameObject.SetActive(false);
 			}
+			AudioManager.instance.PlaySFX(7);
+		
 
 			Invoke("LoadScene", 2f);
 			
@@ -106,6 +113,7 @@ public class Boss : MonoBehaviour {
 
 	void LoadScene()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		SceneManager.LoadScene("Congratulations");
+		AudioManager.instance.StopMusic();
 	}
 }

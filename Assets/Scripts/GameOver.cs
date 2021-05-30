@@ -20,6 +20,7 @@ public class GameOver : MonoBehaviour
 
     public void QuitToMain()
     {
+        AudioManager.instance.StopMusic();
         SceneManager.LoadScene(menuMainScene);
     }
 }

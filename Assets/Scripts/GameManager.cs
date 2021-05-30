@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour {
 	public int bombs = 2;
 	public int upgradeCost = 20;
 
+	public string mode="";
+	public string current_screen="";
+
 	public static GameManager gameManager;
 
 	// Use this for initialization

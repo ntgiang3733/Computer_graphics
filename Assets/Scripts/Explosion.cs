@@ -11,6 +11,7 @@ public class Explosion : MonoBehaviour {
 
 		Enemy otherEnemy = other.GetComponent<Enemy>();
 		Boss boss = other.GetComponent<Boss>();
+		AudioManager.instance.PlaySFX(7);
 
 		if (otherEnemy != null)
 		{

@@ -98,6 +98,7 @@ public class Player : MonoBehaviour {
 				{
 					tempBullet.transform.eulerAngles = new Vector3(0, 0, -90);
 				}
+				AudioManager.instance.PlaySFX(5);
 
 				bullets--;
 				UpdateBulletsUI();
@@ -130,7 +131,6 @@ public class Player : MonoBehaviour {
 				{
 					tempBomb.AddForce(new Vector2(-8, 10), ForceMode2D.Impulse);
 				}
-
 				bombs--;
 				UpdateBombsUI();
 			}

@@ -10,12 +10,14 @@ public class UIManager : MonoBehaviour {
 	public Slider healthBar;
 	public Text coinsText;
 	public Text bombsText;
+	public Text modeText;
 
 	// Use this for initialization
 	void Awake () {
 
 		UpdateHealthBar();
 		UpdateCoins();
+		modeText.text = GameManager.gameManager.mode;
 
 	}
 	

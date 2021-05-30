@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour {
 		transform.localScale = scale;
 	}
 
-	public void TookDamage(int damage)
+	public virtual void TookDamage(int damage)
 	{
 		health -= damage;
 		if(health <= 0)
