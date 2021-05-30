@@ -106,12 +106,14 @@ public class MenuMain : MonoBehaviour {
         gameManager.bullets = 10;
         gameManager.bombs = 5;
         gameManager.upgradeCost = 10;
+        gameManager.fireRate = 0.3f;
     }
     public void setHardMode(){
         gameManager.health = 5;
         gameManager.damage = 1;
         gameManager.bullets = 6;
         gameManager.bombs = 2;
+        gameManager.fireRate = 0.5f;
         gameManager.upgradeCost = 12;
     }
 }
