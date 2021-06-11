@@ -11,6 +11,8 @@ public class UIManager : MonoBehaviour {
 	public Text coinsText;
 	public Text bombsText;
 	public Text modeText;
+	public GameObject GameMenu;
+	
 
 	// Use this for initialization
 	void Awake () {
@@ -19,6 +21,11 @@ public class UIManager : MonoBehaviour {
 		UpdateCoins();
 		modeText.text = GameManager.gameManager.mode;
 
+	}
+	void Update(){
+		if(Input.GetKeyDown(KeyCode.Escape)){
+			GameMenu.SetActive(!GameMenu.gameObject.activeSelf);
+		}
 	}
 	
 	public void UpdateBulletsUI(int bullets)

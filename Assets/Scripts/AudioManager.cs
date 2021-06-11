@@ -48,4 +48,16 @@ public class AudioManager : MonoBehaviour {
             bgm[i].Stop();
         }
     }
+    public void Mute(){
+        for(int i = 0; i < bgm.Length; i++)
+        {
+            bgm[i].mute=!bgm[i].mute;
+        
+        }
+        for(int i = 0; i < sfx.Length; i++)
+        {
+            
+            sfx[i].mute=!sfx[i].mute;
+        }
+    }
 }

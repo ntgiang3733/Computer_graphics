@@ -228,6 +228,7 @@ public class Player : MonoBehaviour {
 		{
 			StartCoroutine(TookDamage());
 		}
+	
 	}
 
 	private void OnCollisionEnter2D(Collision2D other)
@@ -241,6 +242,13 @@ public class Player : MonoBehaviour {
 			Destroy(other.gameObject);
 			gameManager.coins += 1;
 			UpdateCoinsUI();
+		} else if(other.gameObject.CompareTag("Platform")){
+			transform.parent = other.gameObject.transform;
+		}
+	}
+	private void OnCollisionExit2D(Collision2D other){
+		if(other.gameObject.CompareTag("Platform")){
+			transform.parent = null;
 		}
 	}
 

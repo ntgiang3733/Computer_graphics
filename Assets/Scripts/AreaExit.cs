@@ -24,6 +24,7 @@ public class AreaExit : MonoBehaviour {
             {
                 shouldLoadAfterFade = false;
                 GameManager.gameManager.current_screen=areaToLoad;
+                AudioManager.instance.StopMusic();
                 SceneManager.LoadScene("LoadingScene");
             }
         }
